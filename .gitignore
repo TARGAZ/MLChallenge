@@ -168,3 +168,10 @@ cython_debug/
 project_data/
 project_data.zip
 venvMLChallenge/
+
+# Latex Files
+*.aux
+*.log
+*.fdb_latexmk
+*.fls
+*.synctex.gz
