@@ -42,7 +42,7 @@
 \lhead{\includegraphics[scale=0.15]{\logo}} %Affichage de l'image au top de la page
 \rhead{\nouppercase{\leftmark}}
 \rfoot{\thepage}
-\cfoot{Rapport - \textbf{\titre}}
+\cfoot{ - \textbf{\titre}}
 \lfoot{\cours}
 }
 
@@ -53,7 +53,7 @@
 	\includegraphics[width=0.5\textwidth]{\logo}\par\vspace{1cm} %Insertion du logo
 	{\scshape\LARGE \unif \par} %Nom de l'université
 	\vspace{1.5cm}%Espace de 1,5cm
-	{\scshape\Large \cours \\ \sujet \\ Rapport\par} %sous-titre
+	{\scshape\Large \cours \\ \sujet \\ \par} %sous-titre
 	\vspace{1cm}%Espace de 1cm
     \rule{\linewidth}{0.2 mm} \\[0.4 cm]
 	{\huge\bfseries \titre \par} \
