@@ -1,50 +1,51 @@
-This is BibTeX, Version 0.99d
+This is BibTeX, Version 0.99d (TeX Live 2022/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: TAROT_MONNIER_POINGT_PLANCHENAULT.aux
-Reallocating 'name_of_file' (item size: 1) to 7 items.
 The style file: ieeetr.bst
-Reallocating 'name_of_file' (item size: 1) to 40 items.
-I found no \citation commands---while reading file TAROT_MONNIER_POINGT_PLANCHENAULT.aux
 Database file #1: MLChallengeBiblio/MLChallengeBiblio.bib
-You've used 0 entries,
+Warning--empty journal in koBriefReviewFacial2018
+Warning--empty year in koBriefReviewFacial2018
+Warning--empty journal in sariyanidiAutomaticAnalysisFacial2015
+Warning--empty year in sariyanidiAutomaticAnalysisFacial2015
+You've used 2 entries,
             1876 wiz_defined-function locations,
-            477 strings with 3555 characters,
-and the built_in function-call counts, 20 in all, are:
-= -- 0
-> -- 0
+            490 strings with 3966 characters,
+and the built_in function-call counts, 620 in all, are:
+= -- 62
+> -- 15
 < -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 9
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
++ -- 6
+- -- 4
+* -- 47
+:= -- 86
+add.period$ -- 2
+call.type$ -- 2
+change.case$ -- 2
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+cite$ -- 6
+duplicate$ -- 34
+empty$ -- 55
+format.name$ -- 4
+if$ -- 148
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 2
+missing$ -- 2
+newline$ -- 9
+num.names$ -- 2
+pop$ -- 9
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1
+skip$ -- 27
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 46
+swap$ -- 16
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There was 1 error message)
+warning$ -- 4
+while$ -- 6
+width$ -- 3
+write$ -- 20
+(There were 4 warnings)
