@@ -3,48 +3,51 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: TAROT_MONNIER_POINGT_PLANCHENAULT.aux
 Reallocating 'name_of_file' (item size: 1) to 7 items.
 The style file: ieeetr.bst
-Reallocating 'name_of_file' (item size: 1) to 40 items.
-I found no \citation commands---while reading file TAROT_MONNIER_POINGT_PLANCHENAULT.aux
-Database file #1: MLChallengeBiblio/MLChallengeBiblio.bib
-You've used 0 entries,
+Reallocating 'name_of_file' (item size: 1) to 16 items.
+Database file #1: MLChallenge.bib
+Warning--empty journal in koBriefReviewFacial2018
+Warning--empty year in koBriefReviewFacial2018
+Warning--empty publisher in kalapalaFacialExpressionRecognition2020
+Warning--empty year in kalapalaFacialExpressionRecognition2020
+You've used 2 entries,
             1876 wiz_defined-function locations,
-            477 strings with 3555 characters,
-and the built_in function-call counts, 20 in all, are:
-= -- 0
-> -- 0
+            487 strings with 3919 characters,
+and the built_in function-call counts, 419 in all, are:
+= -- 32
+> -- 18
 < -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 9
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
++ -- 7
+- -- 5
+* -- 33
+:= -- 66
+add.period$ -- 2
+call.type$ -- 2
+change.case$ -- 1
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+cite$ -- 6
+duplicate$ -- 24
+empty$ -- 41
+format.name$ -- 5
+if$ -- 96
 int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+int.to.str$ -- 2
+missing$ -- 3
+newline$ -- 9
+num.names$ -- 2
+pop$ -- 13
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1
+skip$ -- 11
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 6
+swap$ -- 7
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There was 1 error message)
+warning$ -- 4
+while$ -- 3
+width$ -- 3
+write$ -- 17
+(There were 4 warnings)

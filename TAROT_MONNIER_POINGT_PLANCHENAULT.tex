@@ -6,7 +6,7 @@
 
 %----------- Informations du rapport ---------
 
-\logo{Logo Esiea - noir.png}
+\logo{IMAGES/Logo Esiea - noir.png}
 \titre{Rapport MLChallenge} %Titre du fichier .pdf
 \cours{Machine Learning Challenge} %Nom du cours
 
@@ -27,13 +27,16 @@
 
 \section{Introduction} 
 
-La reconnaissance des émotions est un domaine en pleine expansion qui suscite l'intérêt de nombreux chercheurs en raison des défis complexes qu'il pose. 
+La reconnaissance des émotions est un domaine en pleine expansion qui suscite l'intérêt de 
+nombreux chercheurs en raison des défis complexes qu'il pose. 
 Malgré les avancées réalisées, ce problème reste encore partiellement résolu. 
 Ce champ d'étude est vaste, mais pour ce projet, nous nous concentrerons sur les émotions dites de base selon le modèle d'Ekman : 
-la joie, la colère, le dégoût, la tristesse, la peur et la surprise, en ajoutant également l'absence d'émotion, c'est-à-dire l'état « neutre ».\\
+la joie, la colère, le dégoût, la tristesse, la peur et la surprise, en ajoutant également l'absence d'émotion, 
+c'est-à-dire l'état « neutre ».\\
 
 \subsection{Objectifs du Projet}
-Pour développer un système de reconnaissance des émotions en utilisant une approche de machine learning, il est généralement recommandé de suivre un pipeline structuré.\\
+Pour développer un système de reconnaissance des émotions en utilisant une approche de machine learning, 
+il est généralement recommandé de suivre un pipeline structuré.\\
 
 Dans le cadre de ce projet, apres la mise en place des différents sujets d'introduction nous aborderons les grands thèmes suivants :\\
 
@@ -47,20 +50,22 @@ Les différents modèles de machine learning sélectionnés pour cette tâche et
 Les méthodes et les métriques utilisées pour évaluer la performance des modèles de reconnaissance d émotions.\\
 
 4.Discussion des Résultats : 
-Une analyse critique des résultats obtenus, mettant en évidence les points forts et les limitations des approches adoptées.\\
+Une analyse critique des résultats obtenus, 
+mettant en évidence les points forts et les limitations des approches adoptées.\\
 
-Cette structure permettra de couvrir de manière exhaustive les aspects clés du développement d'un système de reconnaissance des émotions basé sur l'apprentissage automatique.
+Cette structure permettra de couvrir de manière exhaustive les aspects clés du développement 
+d'un système de reconnaissance des émotions basé sur l'apprentissage automatique.
 
 \subsection{Etat de l'art}
 
 \section{Analyse des Données}
 \subsection{Description des Données}
 
-Le visage manifeste près de 2/3 des émotions chez un humain 
-[mettre ref premier pdf].Les zones les plus démonstratives sont 
+Le visage manifeste près de 2/3 des émotions chez un humain. \cite{koBriefReviewFacial2018} 
+Les zones les plus démonstratives sont 
 principalement situé au niveau des lèvres, des sourcils, des yeux mais 
 également des yeux et du nez (malgré qu'ils sont moins significatif sur leurs
-représentations [mettre ref premier pdf]). Les données sont représentées dans 
+représentations). \cite{koBriefReviewFacial2018} Les données sont représentées dans 
 un CSV. Il y a au total 978 observations, toutes sous le même format. Chacune 
 d'entre est représenté sur une même ligne et 138 colonnes. La première colonne 
 est réservé pour l'ID de l'image. La deuxième colonne représente simplement le 
@@ -73,6 +78,26 @@ encadrant le visage et plus précisément les zones mentionnées plus tôt.
 
 \section{Prétraitement et Extraction des Features}
 \subsection{Prétraitement des Données}
+Comme spécifié auparavant, nous dispons donc des 138 caractéristiques représentant les coordonnées des points repères du visage. 
+Avant de pouvoir construire notre modèle, il est essentiel de normaliser ces données. 
+Nous les normalisons donc selon la manière suivante \cite{kalapalaFacialExpressionRecognition2020} :\\ 
+
+\begin{equation}
+	X = \frac{(X - Xmean)} {Xstd}
+\end{equation}\\
+
+En parallèle, nous devons également appliquer un traitement sur les labels des données. 
+En effet ceux-ci correspondent à une variable qualitative parmi les 7 émotions. 
+Nous devons donc l'encoder en entier entre 0 et 6, chaque entier correspondant à une émotion en particulier. 
+Une fois ces traitements appliqués, nous pouvons commencer à réfléchir au modèle à utiliser.\\
+
+Nous avons également tenter de travailler avec les images. 
+En effet, les repères de visage présentent tout de même plusieurs inconvénients et une partie de l'information est perdue. 
+Les images quant à elle permettent d'avoir les textures, 
+les rides du visage et autres informations susceptibles d'aider dans la reconnaissance d'émotions. 
+Néanmoins, de nouveau défis surviennent lorsque nous utilisons les images, comme la luminosité ou encore l'orientation du visage. 
+Nous supposons également que la construction du modèle ainsi que sa compléxité seront décuplées.
+
 \subsection{Extraction des Features}
 \subsection{Modèles et Méthodologies}
 
@@ -92,6 +117,6 @@ encadrant le visage et plus précisément les zones mentionnées plus tôt.
 \section{Bibliographie / Références}
 
 \bibliographystyle{ieeetr}
-\bibliography{MLChallengeBiblio/MLChallengeBiblio.bib}
+\bibliography{MLChallenge.bib}
 
 \end{document}
