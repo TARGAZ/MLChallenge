@@ -1,5 +1,24 @@
 \babel@toc {french}{}\relax 
-\contentsline {section}{\numberline {1}Première section}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Subsection}{2}{subsection.1.1}%
-\contentsline {section}{\numberline {2}Deuxième section}{2}{section.2}%
-\contentsline {section}{\numberline {3}Quelques commandes}{3}{section.3}%
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Contexte}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Problématique}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Objectifs du Projet}{2}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Etat de l'art}{2}{subsection.1.4}%
+\contentsline {section}{\numberline {2}Analyse des Données}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Description des Données}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Exploration des Données}{2}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Prétraitement et Extraction des Features}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Prétraitement des Données}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Extraction des Features}{2}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Modèles et Méthodologies}{2}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Modèle(s) choisi(s)}{2}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Paramétrage et Entraînement}{2}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Expérimentations}{2}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Résultats}{2}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Évaluation des Modèles}{2}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Analyse des Résultats}{2}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Discussion et Limites}{2}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Discussion des Résultats}{2}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Limites}{2}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Conclusion et Perspectives}{2}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Bibliographie / Références}{2}{section.7}%
