@@ -175,3 +175,8 @@ venvMLChallenge/
 *.fdb_latexmk
 *.fls
 *.synctex.gz
+*.bbl
+*.blg
+*.nlo
+*.out
+*.toc
