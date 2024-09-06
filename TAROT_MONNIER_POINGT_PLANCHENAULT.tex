@@ -13,12 +13,12 @@
 \enseignant{Thibault \textsc{GEOFFROY}} %Nom de l'enseignant
 
 \eleves{Bastien \textsc{TAROT} \\
-		Raphael \textsc{MONNIER} \\ 
-		Tanguy \textsc{POINGT} \\ 
-        Allan \textsc{PLANCHENAULT} } %Nom des élèves
+    Raphael \textsc{MONNIER} \\
+    Tanguy \textsc{POINGT} \\
+    Allan \textsc{PLANCHENAULT} } %Nom des élèves
 
 %----------- Initialisation -------------------
-        
+
 \fairemarges %Afficher les marges
 \fairepagedegarde %Créer la page de garde
 \tabledematieres %Créer la table de matières
@@ -26,7 +26,7 @@
 %------------ Corps du rapport ----------------
 
 
-\section{Introduction} 
+\section{Introduction}
 \subsection{Contexte}
 
 \cite{koBriefReviewFacial2018}
@@ -40,6 +40,20 @@
 
 \section{Analyse des Données}
 \subsection{Description des Données}
+
+Le visage manifeste près de 2/3 des émotions chez un humain 
+[mettre ref premier pdf].Les zones les plus démonstratives sont 
+principalement situé au niveau des lèvres, des sourcils, des yeux mais 
+également des yeux et du nez (malgré qu'ils sont moins significatif sur leurs
+représentations [mettre ref premier pdf]). Les données sont représentées dans 
+un CSV. Il y a au total 978 observations, toutes sous le même format. Chacune 
+d'entre est représenté sur une même ligne et 138 colonnes. La première colonne 
+est réservé pour l'ID de l'image. La deuxième colonne représente simplement le 
+label de l'observation. Pour les 136 colonnes restantes, elles sont séparées 
+en deux sous-parties. En effet, les 64 premières valeurs et les 64 dernières 
+valeurs sont respectivement les coordonnées en X et en Y de chaque points 
+encadrant le visage et plus précisément les zones mentionnées plus tôt.
+
 \subsection{Exploration des Données}
 
 \section{Prétraitement et Extraction des Features}
