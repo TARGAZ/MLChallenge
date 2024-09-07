@@ -130,17 +130,30 @@ k fois et permet d'éviter le surapprentissage du modèle. La meilleure combinai
 sur l'ensemble des données d'entraînement. Il est important de noter que même si cette méthode permet de trouver les hyperparamètres optimaux, elle
 reste tout de même très gourmande en temps et en ressources.\\
 
-Nous avons donc décidé d'utiliser cette méthode afin d'obtenir les meilleurs hyperparamètres pour le modèle SVM.
+Nous avons donc décidé d'utiliser cette méthode afin d'obtenir les meilleurs hyperparamètres pour le modèle SVM. Il possède plusieurs paramètres :\\
+\\- C aussi appelé paramètre de régularisation qui permet de gérer la marge. Une grande valeur de C implique une petite marge mais peu d'erreurs de classification
+tandis qu'une petite valeur de C entraîne davantage d'erreur de classification mais une marge plus grande qui implique une plus grande généralisation.\\
+- Le kernel qui permet de séparer les données. Nous pouvons choisir ici parmi plusieurs kernel dont 'rbf', 'linear' ou encore
+'poly' ou 'sigmoid'.\\
+- Gamma qui est paramètre uniquement présent pour les kernels non-linéaires et qui permet d'épouser davantage la "forme" des données
 \subsection{Expérimentations}
 \subsection{Résultats}
 
 \section{Évaluation des Modèles}
 \subsection{Analyse des Résultats}
-\subsection{Discussion et Limites}
 
-\section{Discussion des Résultats}
-\subsection{Limites}
-\subsection{Conclusion et Perspectives}
+Le meilleur modèle SVM entraîné sur les données fournies présente une précision de 80.74\% sur les données de tests. La matrice de confusion est présentée ci-après :
+
+
+\subsection{Discussions et Limites}
+
+Le modèle SVM s'est montré plutôt performant avec les paramètres que nous avons choisis. Néanmoins, la précision du modèle est sujette à une certaine limite causée
+majoritairement par le type et la forme des données en entrée du modèle. En effet, les points clés du visage ne sont pas forcément toujours caractéristique d'une émotion
+et les points peuvent beaucoup varier d'une personne à l'autre quand bien même l'émotion représentée est la même. Les points repères du visage sont donc parfois biaisés selon
+l'origine de la personne ou la forme de son visage. Nous pouvons cependant retenir que ce modèle présente un temps computationel plutôt court, notamment grâce au nombre réduit
+de caractéristiques en entrée.
+
+\section{Conclusion}
 
 \section{Bibliographie / Références}
 
