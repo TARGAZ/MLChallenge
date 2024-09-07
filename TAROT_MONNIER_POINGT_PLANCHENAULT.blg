@@ -1,53 +1,53 @@
-This is BibTeX, Version 0.99d
+This is BibTeX, Version 0.99d (TeX Live 2022/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: TAROT_MONNIER_POINGT_PLANCHENAULT.aux
-Reallocating 'name_of_file' (item size: 1) to 7 items.
 The style file: ieeetr.bst
-Reallocating 'name_of_file' (item size: 1) to 16 items.
 Database file #1: MLChallenge.bib
+Warning--empty journal in sariyanidiAutomaticAnalysisFacial2015
+Warning--empty year in sariyanidiAutomaticAnalysisFacial2015
 Warning--empty journal in koBriefReviewFacial2018
 Warning--empty year in koBriefReviewFacial2018
 Warning--empty publisher in kalapalaFacialExpressionRecognition2020
 Warning--empty year in kalapalaFacialExpressionRecognition2020
-You've used 2 entries,
+You've used 3 entries,
             1876 wiz_defined-function locations,
-            487 strings with 3919 characters,
-and the built_in function-call counts, 419 in all, are:
-= -- 32
-> -- 18
+            494 strings with 4185 characters,
+and the built_in function-call counts, 802 in all, are:
+= -- 73
+> -- 29
 < -- 0
-+ -- 7
-- -- 5
-* -- 33
-:= -- 66
-add.period$ -- 2
-call.type$ -- 2
-change.case$ -- 1
++ -- 11
+- -- 8
+* -- 63
+:= -- 113
+add.period$ -- 3
+call.type$ -- 3
+change.case$ -- 2
 chr.to.int$ -- 0
-cite$ -- 6
-duplicate$ -- 24
-empty$ -- 41
-format.name$ -- 5
-if$ -- 96
+cite$ -- 9
+duplicate$ -- 43
+empty$ -- 74
+format.name$ -- 8
+if$ -- 189
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 3
-newline$ -- 9
-num.names$ -- 2
-pop$ -- 13
+int.to.str$ -- 3
+missing$ -- 4
+newline$ -- 12
+num.names$ -- 3
+pop$ -- 17
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 11
+skip$ -- 28
 stack$ -- 0
-substring$ -- 6
-swap$ -- 7
+substring$ -- 46
+swap$ -- 17
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 4
-while$ -- 3
-width$ -- 3
-write$ -- 17
-(There were 4 warnings)
+warning$ -- 6
+while$ -- 7
+width$ -- 4
+write$ -- 26
+(There were 6 warnings)

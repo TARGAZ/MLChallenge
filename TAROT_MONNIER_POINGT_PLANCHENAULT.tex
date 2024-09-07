@@ -59,6 +59,73 @@ d'un système de reconnaissance des émotions basé sur l'apprentissage automati
 
 \subsection{Etat de l'art}
 
+L'une des premières étapes de ce challenge était de ce renseigner sur l'état
+de l'art de la reconnaissance des émotions. Nous nous sommes majoritairement
+intéressé à 3 articles que nous allons analyser dans les prochaine section.
+
+\subsubsection{Analyse de l'article \cite{sariyanidiAutomaticAnalysisFacial2015} Automatic Analysis of Facial Affect: A Survey of Registration, Representation, and Recognition. L'auteur principal est Evangelos Sariyanidi.}
+
+Dans l'article, les auteurs commencent par présenter l'objectif des systèmes de 
+reconnaissance des émotions, qui est d'identifier les actions faciales et les 
+émotions associées, notamment en se basant sur le Facial Action Coding System (FACS).
+Le FACS code les expressions faciales en unités d'action (AUs) et distingue entre 
+les émotions basiques (comme la joie et la peur) et non-basiques. L'article 
+souligne aussi l'importance de l'évolution temporelle des expressions dans 
+l'interprétation des émotions et mentionne les défis liés à la reconnaissance des 
+émotions spontanées.
+
+Les auteurs explique aussi à quel point l'enregistrement du visage joue un rôle
+important dans la reconnaissance des émotions. Il existe trois stratégies 
+principales d'enregistrement du visage : l'enregistrement de l’ensemble du visage, 
+l’enregistrement de parties spécifiques, et l’enregistrement de points.
+\\1.Enregistrement du visage entier : Ce type d’enregistrement peut être rigide ou 
+non-rigide. Les approches rigides utilisent des points clés (comme les yeux, 
+le nez ou la bouche) pour transformer le visage en fonction d’un modèle type. 
+Les approches non-rigides, en revanche, permettent de déformer le visage, par 
+exemple en transformant un visage expressif en un visage neutre, afin de minimiser 
+les erreurs liées aux expressions faciales.
+\\2.Enregistrement par parties : Cette méthode divise le visage 
+en différentes zones (comme les yeux et la bouche). Chaque partie 
+est traitée indépendamment pour garantir une meilleure précision.
+\\3.Enregistrement de points : Utilisé pour les représentations 
+basées sur la forme, ce type d'enregistrement localise des points 
+précis sur le visage afin de suivre les changements de forme liés 
+aux expressions.
+\\Chaque méthode d'enregistrement a ses avantages et ses inconvénients, et le choix 
+de la technique dépend des objectifs du système de reconnaissance, notamment sa 
+capacité à gérer les variations de pose de tête et d'expressions naturelles.
+
+La partie suivante de l'article traite des méthodes de représentation faciale. 
+Les auteurs classifient les représentations en deux grandes catégories : les 
+représentations spatiales et les représentations spatio-temporelles. Les 
+représentations spatiales analysent les images de manière indépendante, tandis que 
+les représentations spatio-temporelles prennent en compte une séquence d'images, 
+permettant ainsi de capturer les variations temporelles des expressions faciales. 
+Parmi les représentations spatiales, on trouve les représentations basées sur 
+l'apparence (comme les histogrammes des motifs locaux binaires - LBP - et les 
+transformées de Fourier locales - LPQ), ainsi que les représentations basées sur la 
+forme (qui décrivent les points caractéristiques du visage).
+
+Ensuite, les auteurs examinent les techniques de réduction de la dimensionnalité 
+pour diminuer la complexité computationnelle tout en préservant les informations 
+pertinentes. Ces techniques incluent le pooling, qui regroupe les caractéristiques 
+locales et augmente la tolérance aux erreurs d'enregistrement. Le choix des 
+caractéristiques et l'extraction des caractéristiques (comme l'analyse en 
+composantes principales, PCA) sont aussi abordés pour améliorer les performances 
+des systèmes en réduisant la redondance des données.
+
+Enfin, la section sur les modèles de reconnaissance explore les différentes 
+approches statistiques pour la reconnaissance des émotions. Les systèmes modernes 
+utilisent des techniques d'apprentissage automatique comme les machines à vecteurs 
+de support (SVM), les réseaux bayésiens dynamiques (DBN), et les modèles de champs 
+aléatoires conditionnels (CRF). Ces modèles permettent de modéliser les dépendances 
+temporelles et spatiales, et certains exploitent la personnalisation des modèles 
+pour s’adapter aux variations individuelles, comme les biais liés à l'identité.
+
+\subsubsection{Analyse de l'article \cite{koBriefReviewFacial2018} A Brief Review of Facial Emotion Recognition Based on Visual Information. L'auteur est Byoung Chul Ko.}
+
+\subsubsection{Analyse de l'article \cite{kalapalaFacialExpressionRecognition2020} Facial Expression Recognition from 3D Facial  Landmarks Reconstructed from Images. L'auteur principal est Limysh Kalapala.}
+
 \section{Analyse des Données}
 \subsection{Description des Données}
 
