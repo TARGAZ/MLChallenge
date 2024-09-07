@@ -17,4 +17,3 @@
 \contentsline {subsection}{\numberline {5.1}Analyse des Résultats}{6}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Discussions et Limites}{6}{subsection.5.2}%
 \contentsline {section}{\numberline {6}Conclusion}{6}{section.6}%
-\contentsline {section}{\numberline {7}Bibliographie / Références}{6}{section.7}%
