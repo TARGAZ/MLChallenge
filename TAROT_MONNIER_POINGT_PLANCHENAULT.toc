@@ -7,9 +7,9 @@
 \contentsline {subsubsection}{\numberline {1.2.3}Analyse de l'article \cite {kalapalaFacialExpressionRecognition2020} Facial Expression Recognition from 3D Facial Landmarks Reconstructed from Images. L'auteur principal est Limysh Kalapala.}{4}{subsubsection.1.2.3}%
 \contentsline {section}{\numberline {2}Analyse des Données}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Description des Données}{4}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Exploration des Données}{4}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Prétraitement et Extraction des Features}{7}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Prétraitement des Données}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {2.2}Exploration des Données}{5}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Prétraitement et Extraction des Features}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Prétraitement des Données}{6}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Extraction des Features}{7}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Modèles et Méthodologies}{7}{subsection.3.3}%
 \contentsline {section}{\numberline {4}Modèle(s) choisi(s)}{7}{section.4}%

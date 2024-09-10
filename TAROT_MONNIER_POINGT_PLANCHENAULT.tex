@@ -78,20 +78,22 @@ Les auteurs explique aussi à quel point l'enregistrement du visage joue un rôl
 important dans la reconnaissance des émotions. Il existe trois stratégies 
 principales d'enregistrement du visage : l'enregistrement de l’ensemble du visage, 
 l’enregistrement de parties spécifiques, et l’enregistrement de points.
-\\1.Enregistrement du visage entier : Ce type d’enregistrement peut être rigide ou 
+\begin{itemize}
+    \item \textbf{Enregistrement du visage entier :} Ce type d’enregistrement peut être rigide ou 
 non-rigide. Les approches rigides utilisent des points clés (comme les yeux, 
 le nez ou la bouche) pour transformer le visage en fonction d’un modèle type. 
 Les approches non-rigides, en revanche, permettent de déformer le visage, par 
 exemple en transformant un visage expressif en un visage neutre, afin de minimiser 
 les erreurs liées aux expressions faciales.
-\\2.Enregistrement par parties : Cette méthode divise le visage 
+    \item \textbf{Enregistrement par parties :} Cette méthode divise le visage 
 en différentes zones (comme les yeux et la bouche). Chaque partie 
 est traitée indépendamment pour garantir une meilleure précision.
-\\3.Enregistrement de points : Utilisé pour les représentations 
+    \item \textbf{Enregistrement de points :} Utilisé pour les représentations 
 basées sur la forme, ce type d'enregistrement localise des points 
 précis sur le visage afin de suivre les changements de forme liés 
 aux expressions.
-\\Chaque méthode d'enregistrement a ses avantages et ses inconvénients, et le choix 
+\end{itemize}
+Chaque méthode d'enregistrement a ses avantages et ses inconvénients, et le choix 
 de la technique dépend des objectifs du système de reconnaissance, notamment sa 
 capacité à gérer les variations de pose de tête et d'expressions naturelles.
 
@@ -123,6 +125,42 @@ temporelles et spatiales, et certains exploitent la personnalisation des modèle
 pour s’adapter aux variations individuelles, comme les biais liés à l'identité.
 
 \subsubsection{Analyse de l'article \cite{koBriefReviewFacial2018} A Brief Review of Facial Emotion Recognition Based on Visual Information. L'auteur est Byoung Chul Ko.}
+
+Cet article présente un examen des méthodes de reconnaissance des émotions faciales 
+(FER) basées sur l'information visuelle, un sujet crucial dans les domaines de la 
+vision par ordinateur et de l'intelligence artificielle. La reconnaissance des 
+émotions faciales a des applications variées, notamment dans l'interaction 
+homme-machine, la réalité virtuelle, et les systèmes avancés d'assistance à la conduite.
+
+L'article divise les approches en deux catégories principales : les méthodes classiques 
+et les méthodes basées sur l'apprentissage profond. Dans les approches classiques, 
+la reconnaissance des émotions se fait en trois étapes :
+\begin{itemize}
+    \item Détection des visages et des composants faciaux.
+    \item Extraction des caractéristiques spatiales et temporelles à partir de ces composants.
+    \item Classification des émotions à l'aide d'algorithmes comme les SVM (machines à vecteurs de support), AdaBoost, et Random Forest.
+\end{itemize}
+Ces méthodes reposent sur des caractéristiques définies manuellement, comme les 
+relations géométriques entre les composants faciaux ou les caractéristiques 
+d'apparence globale comme les histogrammes de motifs binaires locaux (LBP). 
+Cependant, elles présentent des limites face aux expressions spontanées et aux variations de pose.
+
+Avec le développement des réseaux neuronaux profonds, l'apprentissage automatique 
+a radicalement amélioré la performance de la FER. Les réseaux de neurones convolutionnels 
+(CNN) sont largement utilisés pour extraire automatiquement des caractéristiques pertinentes 
+à partir d'images faciales. Ces modèles éliminent la dépendance à des modèles 
+basés sur la physique du visage, permettant une approche de bout en bout.
+\\L'article décrit également des approches hybrides combinant des CNN pour les 
+caractéristiques spatiales et des réseaux de mémoire à long terme (LSTM) pour 
+capturer les dynamiques temporelles des expressions faciales dans les séquences vidéo. 
+Ces méthodes permettent de mieux modéliser les variations temporelles des expressions 
+faciales, offrant ainsi une meilleure performance dans la reconnaissance des émotions.
+
+En conclusion, l'article souligne que bien que les approches basées sur 
+l'apprentissage profond surpassent généralement les méthodes classiques, elles 
+nécessitent des quantités massives de données et des capacités de calcul 
+importantes. De plus, la reconnaissance des micro-expressions reste un défi, 
+malgré les progrès récents.
 
 \subsubsection{Analyse de l'article \cite{kalapalaFacialExpressionRecognition2020} Facial Expression Recognition from 3D Facial  Landmarks Reconstructed from Images. L'auteur principal est Limysh Kalapala.}
 
