@@ -5,15 +5,15 @@
 \contentsline {subsubsection}{\numberline {1.2.1}Analyse de l'article \cite {sariyanidiAutomaticAnalysisFacial2015} Automatic Analysis of Facial Affect: A Survey of Registration, Representation, and Recognition. L'auteur principal est Evangelos Sariyanidi.}{2}{subsubsection.1.2.1}%
 \contentsline {subsubsection}{\numberline {1.2.2}Analyse de l'article \cite {koBriefReviewFacial2018} A Brief Review of Facial Emotion Recognition Based on Visual Information. L'auteur est Byoung Chul Ko.}{4}{subsubsection.1.2.2}%
 \contentsline {subsubsection}{\numberline {1.2.3}Analyse de l'article \cite {kalapalaFacialExpressionRecognition2020} Facial Expression Recognition from 3D Facial Landmarks Reconstructed from Images. L'auteur principal est Limysh Kalapala.}{4}{subsubsection.1.2.3}%
-\contentsline {section}{\numberline {2}Analyse des Données}{4}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Description des Données}{4}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Exploration des Données}{4}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Prétraitement et Extraction des Features}{6}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Prétraitement des Données}{6}{subsection.3.1}%
+\contentsline {section}{\numberline {2}Analyse des Données}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Description des Données}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Exploration des Données}{5}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Prétraitement et Extraction des Features}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Prétraitement des Données}{7}{subsection.3.1}%
 \contentsline {section}{\numberline {4}Modèle(s) choisi(s)}{7}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Paramétrage et Entraînement}{7}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Résultats}{7}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Évaluation des Modèles}{7}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Analyse des Résultats}{7}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Discussions et Limites}{7}{subsection.5.2}%
+\contentsline {subsection}{\numberline {4.2}Résultats}{8}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Évaluation des Modèles}{8}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Analyse des Résultats}{8}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Discussions et Limites}{8}{subsection.5.2}%
 \contentsline {section}{\numberline {6}Conclusion}{8}{section.6}%
