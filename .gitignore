@@ -166,6 +166,7 @@ cython_debug/
 
 # Data Folder
 project_data/
+testing_data/
 project_data.zip
 venvMLChallenge/
 
