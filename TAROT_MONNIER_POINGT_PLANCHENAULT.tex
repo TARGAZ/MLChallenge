@@ -274,13 +274,18 @@ Nous avons donc décidé d'utiliser cette méthode afin d'obtenir les meilleurs 
 tandis qu'une petite valeur de C entraîne davantage d'erreur de classification mais une marge plus grande qui implique une plus grande généralisation.\\
 - Le kernel qui permet de séparer les données. Nous pouvons choisir ici parmi plusieurs kernel dont 'rbf', 'linear' ou encore
 'poly' ou 'sigmoid'.\\
-- Gamma qui est paramètre uniquement présent pour les kernels non-linéaires et qui permet d'épouser davantage la "forme" des données
+- Gamma qui est un paramètre uniquement présent pour les kernels non-linéaires et qui permet d'épouser davantage la "forme" des données
+
+Les résultats fournies par la GridSearch nous donnent les hyperparamètres optimaux pour notre modèle SVM. Nous trouvons
+que le modèle SVM avec un kernel 'linear', un C de 10 et un gamma de 0.01 est le meilleur modèle pour notre jeu de données.\\
 
 \subsubsection{Dans le cas des images}
 Pour les images, nous avons décidé d'utiliser un modèle de réseau de neurones convolutif (CNN). Ces modèles ont démontrés
 leur efficacité dans la reconnaissance d'images et notamment dans la reconnaissance d'émotions. La structure du modèle est la suivante :\\
 
 \subsection{Résultats}
+
+\subsubsection{Dans le cas des points de repères 2D}
 
 Le meilleur modèle SVM entraîné sur les données fournies présente une précision de 78.06\% sur les données de tests. La matrice de confusion est présentée
 sur la figure \ref*{fig:matrice_confusion_resultats}. Nous pouvons voir que le modèle a quelques difficultés à distinguer
@@ -289,6 +294,8 @@ des poits clés du visage proches.\\
 
 \insererfigure{IMAGES/matrice_confusion_resultats.png}{10cm}{Matrice de confusion des résultats}{matrice_confusion_resultats}
 
+
+\subsubsection{Dans le cas des images}
 Le modèle CNN entraîné sur les images augmentées et redimensionnées grâce aux points de repères du visage présente une précision
 de 74.32\% sur les données de tests. Le graphique présentant l'évolution de la précision au cours de l'entraînement
 sur les jeux de données d'entraînement et de validation est présentté sur la figure. Nous remaqruons qu'au bout d'un certain temps, la précision
