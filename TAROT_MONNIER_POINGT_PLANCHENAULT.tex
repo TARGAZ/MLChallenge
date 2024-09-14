@@ -228,7 +228,7 @@ Nous les normalisons donc selon la manière suivante \cite{kalapalaFacialExpress
 En parallèle, nous devons également appliquer un traitement sur les labels des données.
 En effet ceux-ci correspondent à une variable qualitative parmi les 7 émotions.
 Nous devons donc l'encoder en entier entre 0 et 6, chaque entier correspondant à une émotion en particulier.
-Une fois ces traitements appliqués, nous pouvons commencer à réfléchir au modèle à utiliser.\\
+Une fois ces traitements appliqués, nous pouvons commencer à réfléchir au modèle à utiliser.
 
 \subsection{Dans le cas des images}
 Nous avons également tenter de travailler avec les images.
@@ -303,7 +303,6 @@ dimension des données. Une fois les caractéristiques extraites, elles sont pas
 La couche de dropout à 0.35 est présente juste avant la dernière couche dense et permet de réduire le surapprentissage du modèle. La dernière couche
 est une couche dense avec 7 neurones pour la classification des 7 émotions.\\
 
-
 \subsection{Résultats}
 
 \subsubsection{Dans le cas des points de repères 2D}
@@ -314,7 +313,6 @@ et différencier les émotions 'anger' et 'disgust'. Ceci s'explique par le fait
 des poits clés du visage proches.\\
 
 \insererfigure{IMAGES/matrice_confusion_resultats.png}{10cm}{Matrice de confusion des résultats}{matrice_confusion_resultats}
-
 
 \subsubsection{Dans le cas des images}
 Le modèle CNN entraîné sur les images augmentées et redimensionnées grâce aux points de repères du visage présente une précision
@@ -331,9 +329,22 @@ Le modèle SVM s'est montré plutôt performant avec les paramètres que nous av
 majoritairement par le type et la forme des données en entrée du modèle. En effet, les points clés du visage ne sont pas forcément toujours caractéristique d'une émotion
 et les points peuvent beaucoup varier d'une personne à l'autre quand bien même l'émotion représentée est la même. Les points repères du visage sont donc parfois biaisés selon
 l'origine de la personne ou la forme de son visage. Nous pouvons cependant retenir que ce modèle présente un temps computationel plutôt court, notamment grâce au nombre réduit
-de caractéristiques en entrée.\\
+de caractéristiques en entrée.
+
 Lors du rapport intermédiaire et suite à une pseudo-labellisation manuelle des données de tests fournies, le modèle SVM obtient une précision de 52\%.
-Cette précision est bien inférieure à celle reléve sur nos données de tests. Nous ne comprenons pas pourquoi cette différence est si importante.
+Cette précision est bien inférieure à celle relevée sur nos données de tests. Ceci peut s'expliquer par une forte variance des points repères du visage
+d'un personne à l'autre.\\
+
+Le modèle CNN, quant à lui présente une précision beaucoup plus importante sur les données de tests. Les images présentent en effet plus de caractéristiques
+et d'informations que les points de repères du visage. Néanmoins, nous ne parvenons pas à obtenir une précision moyenne supérieure à 80\%. La première raison
+porte sur les données en elles-mêmes. En effet, le jeu de données est assez petit et malgré notre augmentation de données, le modèle reste sujet à un surapprentissage,
+comme le montre la stagnation de la précision en validation. La deuxième raison que nous pensons moins probable porte sur l'architecture du modèle en elle-même et sur le choix
+des hyperparamètres. Néanmoins, d'après les articles que nous avons étudiés, cette architecture est plutôt standard pour la reconnaissance d'émotions sur des images.
+Nous avons tenté d'ajouter des couches de convolution et de pooling supplémentaires mais cela n'a pas amélioré la précision du modèle.
+Lors du rapport intermédiaire et suite à une pseudo-labellisation manuelle des données de tests fournies, le modèle CNN obtient une précision de 78\%.
+Nous restons donc confiants sur la performance de notre modèle.
+
+
 
 \section{Conclusion}
 Ce rapport a présenté différentes technique de Machine Learning pour la reconnaissance des émotions.
