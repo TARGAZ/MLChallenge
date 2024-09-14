@@ -267,28 +267,49 @@ processus est répété k fois et permet d'éviter le surapprentissage du modèl
 combinaison d'hyperparamètres est ensuite utilisée pour entraîner le modèle sur l'ensemble
 des données d'entraînement. Il est important de noter que même si cette méthode permet
 de trouver les hyperparamètres optimaux, elle reste tout de même très gourmande en
-temps et en ressources\\
+temps et en ressources.\\
 
 Nous avons donc décidé d'utiliser cette méthode afin d'obtenir les meilleurs hyperparamètres pour le modèle SVM. Il possède plusieurs paramètres :\\
-\\- C aussi appelé paramètre de régularisation qui permet de gérer la marge. Une grande valeur de C implique une petite marge mais peu d'erreurs de classification
-tandis qu'une petite valeur de C entraîne davantage d'erreur de classification mais une marge plus grande qui implique une plus grande généralisation.\\
-- Le kernel qui permet de séparer les données. Nous pouvons choisir ici parmi plusieurs kernel dont 'rbf', 'linear' ou encore
-'poly' ou 'sigmoid'.\\
-- Gamma qui est un paramètre uniquement présent pour les kernels non-linéaires et qui permet d'épouser davantage la "forme" des données
+\begin{itemize}
+    \item C aussi appelé paramètre de régularisation qui permet de gérer la marge. Une grande valeur de C implique une petite marge mais peu d'erreurs de classification
+          tandis qu'une petite valeur de C entraîne davantage d'erreur de classification mais une marge plus grande qui implique une plus grande généralisation.
+    \item Le kernel qui permet de séparer les données. Nous pouvons choisir ici parmi plusieurs kernel dont 'rbf', 'linear' ou encore
+          'poly' ou 'sigmoid'.
+    \item Gamma qui est un paramètre uniquement présent pour les kernels non-linéaires et qui permet d'épouser davantage la "forme" des données\\
+\end{itemize}
 
 Les résultats fournies par la GridSearch nous donnent les hyperparamètres optimaux pour notre modèle SVM. Nous trouvons
-que le modèle SVM avec un kernel 'linear', un C de 10 et un gamma de 0.01 est le meilleur modèle pour notre jeu de données.\\
+que le modèle SVM avec un kernel 'linear', un C de 10 et un gamma de 0.01 est le meilleur modèle pour notre jeu de données.
 
 \subsubsection{Dans le cas des images}
 Pour les images, nous avons décidé d'utiliser un modèle de réseau de neurones convolutif (CNN). Ces modèles ont démontrés
-leur efficacité dans la reconnaissance d'images et notamment dans la reconnaissance d'émotions. La structure du modèle est la suivante :\\
+leur efficacité dans la reconnaissance d'images et notamment dans la reconnaissance d'émotions. Les paramètres utilisés pour
+entraîner le modèle sont les suivants :
+
+\begin{itemize}
+    \item $\alpha$ : Le pas d'apprentissage = 0.001
+    \item epochs : Le nombre d'itérations sur le jeu de données = 20
+    \item batch\_size : Le nombre d'échantillons utilisés pour mettre à jour les poids du modèle = 32\\
+\end{itemize}
+
+La structure et l'architecture du modèle que nous avons choisi et construit est présentée sur la figure \ref*{fig: cnn_model}.\\
+
+\insererfigure{IMAGES/model_architecture.png}{12cm}{Architecture du modèle CNN}{cnn_model}
+
+Le modèle prend en entrée des images de taille 96x96x3 (3 canaux pour les couleurs RGB) et les passe à travers plusieurs couches de convolution
+et de pooling. Ces couches permettent d'extraire les caractéristiques des images et de réduire la dimensionnalité des données. Les couches
+de convolution sont suivies de couches d'activation de type ReLU puis de couches de pooling. Les couches de pooling permettent de réduire la
+dimension des données. Une fois les caractéristiques extraites, elles sont passées à travers des couches de neurones denses pour la classification.
+La couche de dropout à 0.35 est présente juste avant la dernière couche dense et permet de réduire le surapprentissage du modèle. La dernière couche
+est une couche dense avec 7 neurones pour la classification des 7 émotions.\\
+
 
 \subsection{Résultats}
 
 \subsubsection{Dans le cas des points de repères 2D}
 
 Le meilleur modèle SVM entraîné sur les données fournies présente une précision de 78.06\% sur les données de tests. La matrice de confusion est présentée
-sur la figure \ref*{fig:matrice_confusion_resultats}. Nous pouvons voir que le modèle a quelques difficultés à distinguer
+sur la figure \ref*{fig: matrice_confusion_resultats}. Nous pouvons voir que le modèle a quelques difficultés à distinguer
 et différencier les émotions 'anger' et 'disgust'. Ceci s'explique par le fait que ces deux émotions rendent le visage plutôt similaire avec
 des poits clés du visage proches.\\
 
