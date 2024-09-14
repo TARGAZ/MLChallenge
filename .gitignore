@@ -167,17 +167,25 @@ cython_debug/
 # Data Folder
 project_data/
 testing_data/
+test_final/
 project_data.zip
 venvMLChallenge/
 
 # Latex Files
-*.aux
-*.log
-*.fdb_latexmk
-*.fls
-*.synctex.gz
-*.bbl
-*.blg
-*.nlo
-*.out
-*.toc
+**/*.aux
+**/*.lof
+**/*.log
+**/*.lot
+**/*.fls
+**/*.out
+**/*.toc
+**/*.fmt
+**/*.fot
+**/*.cb
+**/*.cb2
+**/*.lb
+**/*.blg
+**/*.bbl
+**/*.synctex.gz
+**/*.fdb_latexmk
+**/*.nlo
