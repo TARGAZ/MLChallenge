@@ -170,3 +170,22 @@ testing_data/
 test_final/
 project_data.zip
 venvMLChallenge/
+
+# Latex Files
+**/*.aux
+**/*.lof
+**/*.log
+**/*.lot
+**/*.fls
+**/*.out
+**/*.toc
+**/*.fmt
+**/*.fot
+**/*.cb
+**/*.cb2
+**/*.lb
+**/*.blg
+**/*.bbl
+**/*.synctex.gz
+**/*.fdb_latexmk
+**/*.nlo
