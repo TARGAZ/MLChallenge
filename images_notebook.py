@@ -66,8 +66,8 @@ number_to_emotion = {
 }
 
 BATCH_SIZE = 8
-LEARNING_RATE = 0.000065
-EPOCHS = 800
+LEARNING_RATE = 0.00065
+EPOCHS = 600
 
 
 # ### Classes
@@ -209,7 +209,7 @@ class CNNEmotionClassifier(nn.Module):
         self.fc2 = nn.Linear(512, 7)
         self.pool = nn.MaxPool2d(2, 2)
         self.relu = nn.ReLU()
-        self.dropout = nn.Dropout(p=0.75)
+        self.dropout = nn.Dropout(p=0.60)
         self.dropout2 = nn.Dropout(p=0.70)
 
     def forward(self, x):
@@ -320,7 +320,7 @@ print(f'Accuracy of the model on the test set: {test_accuracy:.2f}%')
 # In[234]:
 
 
-model_save_path = "./cnn_model_tanguy5.pth"
+model_save_path = "./cnn_model_tanguy6.pth"
 torch.save(model.state_dict(), model_save_path)
 
 
@@ -447,7 +447,7 @@ show_images(test_loader_, mean.tolist(), std.tolist(), num_images=5)
 
 # Test phase
 model = CNNEmotionClassifier()
-model.load_state_dict(torch.load("cnn_model_tanguy5.pth"))
+model.load_state_dict(torch.load("cnn_model_tanguy6.pth"))
 model.eval()
 
 results = []
