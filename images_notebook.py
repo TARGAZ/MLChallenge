@@ -13,13 +13,13 @@
 
 # ## Installation des libraries
 
-# In[112]:
+# In[226]:
 
 
 #get_ipython().run_line_magic('pip', 'install numpy matplotlib pandas scikit-learn keras tensorflow torch torchvision')
 
 
-# In[134]:
+# In[227]:
 
 
 import torch
@@ -42,7 +42,7 @@ print(device)
 
 # ### Variables globales
 
-# In[135]:
+# In[228]:
 
 
 emotion_to_number = {
@@ -65,14 +65,14 @@ number_to_emotion = {
     6 : "fear"
 }
 
-BATCH_SIZE = 16
-LEARNING_RATE = 0.001
-EPOCHS = 30
+BATCH_SIZE = 8
+LEARNING_RATE = 0.000065
+EPOCHS = 800
 
 
 # ### Classes
 
-# In[145]:
+# In[229]:
 
 
 # Define the EmotionDataset class based on the Dataset class from PyTorch
@@ -113,7 +113,7 @@ class EmotionDataset(Dataset):
 
 # ## Préparation des données
 
-# In[146]:
+# In[230]:
 
 
 # Define a temporary transform without normalization
@@ -151,7 +151,7 @@ print(f'Std: {std}')
 
 # Define the final transform with normalization
 transform = transforms.Compose([
-    transforms.RandomRotation(degrees=5),
+    #transforms.RandomRotation(degrees=5),
     transforms.RandomHorizontalFlip(p=0.5),  # Randomly flip the image horizontally
     transforms.Resize((96, 96)),
     transforms.ToTensor(),
@@ -196,67 +196,39 @@ def show_images(loader, mean, std, num_images=5):
 show_images(train_loader, mean.tolist(), std.tolist(), num_images=5)
 
 
-# In[117]:
+# In[231]:
 
 
 class CNNEmotionClassifier(nn.Module):
     def __init__(self):
         super(CNNEmotionClassifier, self).__init__()
-        # Convolutional layers
         self.conv1 = nn.Conv2d(3, 32, kernel_size=3, padding=1)
         self.conv2 = nn.Conv2d(32, 64, kernel_size=3, padding=1)
         self.conv3 = nn.Conv2d(64, 128, kernel_size=3, padding=1)
-        self.conv4 = nn.Conv2d(128, 256, kernel_size=3, padding=1)
-        self.conv5 = nn.Conv2d(256, 512, kernel_size=3, padding=1)
-
-        # Batch normalization after each convolution
-        self.bn1 = nn.BatchNorm2d(32)
-        self.bn2 = nn.BatchNorm2d(64)
-        self.bn3 = nn.BatchNorm2d(128)
-        self.bn4 = nn.BatchNorm2d(256)
-        self.bn5 = nn.BatchNorm2d(512)
-
-        # Activation, pooling, dropout
-        self.relu = nn.ReLU()
+        self.fc1 = nn.Linear(128 * 12 * 12, 512)
+        self.fc2 = nn.Linear(512, 7)
         self.pool = nn.MaxPool2d(2, 2)
-        self.dropout = nn.Dropout(p=0.4)
-        self.dropout2 = nn.Dropout(p=0.3)
-
-        # This will be calculated dynamically based on input size
-        self.fc1_input_dim = None
-
-        # Fully connected layers will be initialized later
-        self.fc1 = None
-        self.fc2 = nn.Linear(512, 128)
-        self.fc3 = nn.Linear(128, 7)  # 7 classes for emotions
+        self.relu = nn.ReLU()
+        self.dropout = nn.Dropout(p=0.75)
+        self.dropout2 = nn.Dropout(p=0.70)
 
     def forward(self, x):
-        # Convolutional layers with batch normalization
-        x = self.pool(self.relu(self.bn1(self.conv1(x))))
-        x = self.pool(self.relu(self.bn2(self.conv2(x))))
-        x = self.pool(self.relu(self.bn3(self.conv3(x))))
-        x = self.pool(self.relu(self.bn4(self.conv4(x))))
-        x = self.pool(self.relu(self.bn5(self.conv5(x))))
-
-        # Calculate fc1 input dimensions dynamically
-        if self.fc1_input_dim is None:
-            self.fc1_input_dim = x.view(x.size(0), -1).size(1)
-            self.fc1 = nn.Linear(self.fc1_input_dim, 512)  # Initialize fc1 based on this size
-
-        # Flatten the output
-        x = x.view(-1, self.fc1_input_dim)
-
-        # Fully connected layers with dropout
-        x = self.relu(self.fc1(x))
+        x = self.pool(self.relu(self.conv1(x)))
         x = self.dropout(x)
-        x = self.relu(self.fc2(x))
+        x = self.pool(self.relu(self.conv2(x)))
+        x = self.dropout(x)
+        x = self.pool(self.relu(self.conv3(x)))
+        x = x.view(-1, 128 * 12 * 12)
+        x = self.relu(self.fc1(x))
         x = self.dropout2(x)
-        x = self.fc3(x)
-        
+        x = self.fc2(x)
         return x
 
 
-# In[118]:
+model = CNNEmotionClassifier()
+
+
+# In[232]:
 
 
 # Model, criterion, optimizer
@@ -327,7 +299,7 @@ def plot_accuracies(train_acc, val_acc):
 plot_accuracies(train_acc, val_acc)
 
 
-# In[119]:
+# In[233]:
 
 
 # Test phase
@@ -345,10 +317,10 @@ test_accuracy = 100 * correct_test / total_test
 print(f'Accuracy of the model on the test set: {test_accuracy:.2f}%')
 
 
-# In[120]:
+# In[234]:
 
 
-model_save_path = "./cnn_model_tanguy3.pth"
+model_save_path = "./cnn_model_tanguy5.pth"
 torch.save(model.state_dict(), model_save_path)
 
 
@@ -356,7 +328,7 @@ torch.save(model.state_dict(), model_save_path)
 
 # ### Chargement des données de test
 
-# In[121]:
+# In[235]:
 
 
 test_csv_path = "./testing_data/testing_data.csv"
@@ -368,7 +340,7 @@ test_image_path = "./testing_data/testing_img/"
 
 # ### Classe personnalisée pour le dataset de test comme on a pas les labels
 
-# In[131]:
+# In[236]:
 
 
 # Create a TestDataset espacially for the testing data (no labels)
@@ -406,7 +378,7 @@ class TestDataset(Dataset):
 
 # ### Préparation des données de tests (normalisation, etc.)
 
-# In[132]:
+# In[237]:
 
 
 temp_dataset = TestDataset(annotations_file=test_csv_path, img_dir=test_image_path, transform=temp_transform)
@@ -434,7 +406,7 @@ print(f'Std: {std}')
 
 # Define the final transform with normalization
 transform = transforms.Compose([
-    transforms.RandomRotation(degrees=5),
+    #transforms.RandomRotation(degrees=5),
     transforms.RandomHorizontalFlip(p=0.5),  # Randomly flip the image horizontally
     transforms.Resize((96, 96)),
     transforms.ToTensor(),
@@ -470,12 +442,12 @@ show_images(test_loader_, mean.tolist(), std.tolist(), num_images=5)
 
 # ### Prédiction sur les données de test
 
-# In[127]:
+# In[238]:
 
 
 # Test phase
 model = CNNEmotionClassifier()
-model.load_state_dict(torch.load("cnn_model_tanguy3.pth"))
+model.load_state_dict(torch.load("cnn_model_tanguy5.pth"))
 model.eval()
 
 results = []
@@ -490,7 +462,7 @@ df = pd.DataFrame(results, columns=['labels'])
 df.to_csv('results.csv', index=False)
 
 
-# In[86]:
+# In[239]:
 
 
 # Compare res.csv and results.csv on column labels
