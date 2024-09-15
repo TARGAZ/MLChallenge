@@ -33,7 +33,7 @@ nombreux chercheurs en raison des défis complexes qu'il pose.
 Malgré les avancées réalisées, ce problème reste encore partiellement résolu.
 Ce champ d'étude est vaste, mais pour ce projet, nous nous concentrerons sur les émotions dites de base selon le modèle d'Ekman :
 la joie, la colère, le dégoût, la tristesse, la peur et la surprise, en ajoutant également l'absence d'émotion,
-c'est-à-dire l'état « neutre ».\\
+c'est-à-dire l'état « neutre ».
 
 \subsection{Objectifs du Projet}
 Pour développer un système de reconnaissance des émotions en utilisant une approche de machine learning,
@@ -304,6 +304,21 @@ dimension des données. Une fois les caractéristiques extraites, elles sont pas
 La couche de dropout à 0.35 est présente juste avant la dernière couche dense et permet de réduire le surapprentissage du modèle. La dernière couche
 est une couche dense avec 7 neurones pour la classification des 7 émotions.\\
 
+Malgré des résultats plutôt satisfaisants présentés dans la section suivante, nous avons tenté d'améliorer la précision en validation avec
+l'ajout de plusieurs couches de dropout, et pour être plus précis, une après chaque couche de convolution \ref*{fig: cnn_dropout_model}. Ces couches
+de dropout permettent de réduire le surapprentissage du modèle en désactivant aléatoirement un certain nombre de neurones à chaque itération.
+Elles ralentissent l'apprentissage du modèle mais permettent d'obtenir une meilleure généralisation. Néanmoins, cette modification n'a pas
+été concluante. La précision en validation reste la même et le modèle mets davantage de temps pour s'entraîner. Nous avons donc décidé
+de conserver la première architecture. Les hyperparamètres utilisés pour entraîner ce modèle sont les suivants :
+
+\begin{itemize}
+    \item $\alpha$ : Le pas d'apprentissage = 0.000065
+    \item epochs : Le nombre d'itérations sur le jeu de données = 600
+    \item batch\_size : Le nombre d'échantillons utilisés pour mettre à jour les poids du modèle = 8
+\end{itemize}
+
+\insererfigure{IMAGES/model_architecture_with_dropout.png}{12cm}{Architecture du modèle CNN avec couches de dropout}{cnn_dropout_model}
+
 \subsection{Résultats}
 
 \subsubsection{Dans le cas des points de repères 2D}
@@ -318,7 +333,7 @@ des poits clés du visage proches.\\
 \subsubsection{Dans le cas des images}
 Le modèle CNN entraîné sur les images augmentées et redimensionnées grâce aux points de repères du visage présente une précision
 de 74.32\% sur les données de tests. Le graphique présentant l'évolution de la précision au cours de l'entraînement
-sur les jeux de données d'entraînement et de validation est présentté sur la figure. Nous remaqruons qu'au bout d'un certain temps, la précision
+sur les jeux de données d'entraînement et de validation est présentté sur la figure. Nous remarquons qu'au bout d'un certain temps, la précision
 en validation stagne tandis que celle en entraînement continue d'augmenter. Cela est sans doute dû à un surapprentissage du modèle.
 
 \insererfigure{IMAGES/train_validation_acc.png}{8cm}{Précision du modèle CNN au cours de l'entraînement}{precision_cnn}
