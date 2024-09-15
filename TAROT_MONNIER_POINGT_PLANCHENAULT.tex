@@ -292,7 +292,8 @@ entraîner le modèle sont les suivants :
     \item batch\_size : Le nombre d'échantillons utilisés pour mettre à jour les poids du modèle = 32\\
 \end{itemize}
 
-La structure et l'architecture du modèle que nous avons choisi et construit est présentée sur la figure \ref*{fig: cnn_model}.\\
+La structure et l'architecture du modèle que nous avons choisi et construit est présentée sur la figure \ref*{fig: cnn_model}.
+Cette architecture est inspirée de celle référencée par \cite{agungImagebasedFacialEmotion2024}\\
 
 \insererfigure{IMAGES/model_architecture.png}{12cm}{Architecture du modèle CNN}{cnn_model}
 
@@ -343,7 +344,6 @@ des hyperparamètres. Néanmoins, d'après les articles que nous avons étudiés
 Nous avons tenté d'ajouter des couches de convolution et de pooling supplémentaires mais cela n'a pas amélioré la précision du modèle.
 Lors du rapport intermédiaire et suite à une pseudo-labellisation manuelle des données de tests fournies, le modèle CNN obtient une précision de 78\%.
 Nous restons donc confiants sur la performance de notre modèle.
-
 
 
 \section{Conclusion}
